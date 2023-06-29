@@ -1,0 +1,19 @@
+import csv
+
+# Запись данных в CSV-файл
+data = [
+    ['Name', 'Age', 'Country'],
+    ['John', 30, 'USA'],
+    ['Alice', 25, 'UK'],
+    ['Bob', 35, 'Canada']
+]
+
+with open('data.csv', 'w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerows(data)
+
+# Чтение данных из CSV-файла
+with open('data.csv', 'r') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)
